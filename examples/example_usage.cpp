@@ -25,7 +25,7 @@ int main() {
 
     USDDevice device;
 
-    // Настройка колбэков
+    
     Callbacks callbacks;
     callbacks.on_message_type1 = [](const MessageType1& msg) {
         std::cout << "[Message Type 1] Timestamp: " << msg.timestamp
@@ -48,14 +48,14 @@ int main() {
 
     device.setCallbacks(callbacks);
 
-    // Инициализация
+    
     std::cout << "Initializing device..." << std::endl;
     if (!device.init("127.0.0.1", 60000)) {
         std::cerr << "Failed to initialize device" << std::endl;
         return 1;
     }
 
-    // Запуск
+    
     std::cout << "Starting device..." << std::endl;
     device.start();
 

@@ -62,7 +62,7 @@ namespace USD {
         void stop();
         bool isRunning() const { return running_.load(); }
 
-        // === нямнбмше йнлюмдш ===
+        
         bool setTime();
         bool requestTime();
         bool requestAnalogValues();
@@ -70,7 +70,7 @@ namespace USD {
         bool requestUSDStatus();
         bool restartDevice();
 
-        // === мюярпнийю яерх (йнлюмдш 3-9) ===
+        
         bool setSubnetMask(uint32_t mask);
         bool setDeviceIP(uint32_t ip);
         bool setDevicePort(uint16_t port);
@@ -79,10 +79,10 @@ namespace USD {
         bool setServerPort(uint16_t port);
         bool setMACAddress(const uint8_t mac[6]);
 
-        // === сопюбкемхе нвепедэч (йнлюмдю 23) ===
+       
         bool initFIFO();
 
-        // === пюанрю я опньхбйни (йнлюмдш 15-17) ===
+        
         bool getDataForApp();
         bool getDataForBoot();
         bool getDataForNov();
@@ -118,4 +118,4 @@ namespace USD {
         bool winsock_initialized_;
     };
 
-} // namespace USD
+} 
